@@ -44,7 +44,7 @@ RUN bash /tmp/library-scripts/common-debian.sh "${INSTALL_ZSH}" "${USERNAME}" "$
     bash /tmp/library-scripts/kubectl-helm-debian.sh && \
     bash /tmp/library-scripts/sshd-debian.sh && \
     bash /tmp/library-scripts/terraform-debian.sh && \
-    bash /tmp/library-scripts/gcloud-debian.sh
+    bash /tmp/library-scripts/gcloud-debian.sh && \
 
 # Run our clean up step
     apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts
