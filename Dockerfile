@@ -19,11 +19,9 @@ ARG RUNTIME_PACKAGES="software-properties-common \
     python3-crcmod \
     openssh-client \
     procps \
-    zplug \
     file \
     gcc \
     apt-transport-https \
-    lsb-release \
     openssh-client \
     git"
 
@@ -46,8 +44,7 @@ RUN bash /tmp/library-scripts/common-debian.sh "${INSTALL_ZSH}" "${USERNAME}" "$
     bash /tmp/library-scripts/kubectl-helm-debian.sh && \
     bash /tmp/library-scripts/sshd-debian.sh && \
     bash /tmp/library-scripts/terraform-debian.sh && \
-    bash /tmp/library-scripts/gcloud-debian.sh && \
-    bash /tmp/library-scripts/zplug-debian.sh && \
+    bash /tmp/library-scripts/gcloud-debian.sh
 
 # Run our clean up step
     apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts
