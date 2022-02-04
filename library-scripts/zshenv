@@ -6,6 +6,7 @@
 
 # Set up our path first
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # Work around macos's stupid broken ssh-agent
 export SSH_AUTH_SOCK=/usr/local/var/run/yubikey-agent.sock
